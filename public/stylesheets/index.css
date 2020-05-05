@@ -110,7 +110,8 @@ p {
         width: 100%;
         color: #fff; }
         #app .commits-container .commit-item-container .info-container .subject {
-          font-size: 1.5em; }
+          font-size: 1.5em;
+          margin-bottom: 5px; }
         #app .commits-container .commit-item-container .info-container .author-name {
           font-size: .8em;
           font-weight: 100;
