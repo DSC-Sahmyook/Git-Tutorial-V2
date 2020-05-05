@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             users: [],
             commits: [],
             title:"DSC/GIT-Tutorial",
-            content_state:"COMMITS", // USERS / HISTORIES
+            content_state:"USERS", // USERS / HISTORIES
         },
         methods: {
             changeContentState: function(state){
