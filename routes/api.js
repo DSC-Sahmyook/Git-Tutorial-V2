@@ -1,12 +1,10 @@
 import express from 'express';
-import UsersData from '../data/users.json';
-
-import gitLog from 'git-log';
-
 const router = express.Router();
 
+import UsersData from '../data/users.json';
+import git_log_to_json from 'git-log-to-json';
+
 router.get("/", (req,res,next)=>{
-    console.log("Hello");
     res.json("Hello");
 });
 
@@ -17,17 +15,17 @@ router.get("/user", (req, res)=>{
 });
 
 router.get("/history", (req, res)=>{
-    console.log("called");
-    gitLog().then(commits=>{
-        console.log("called",commits);
+    git_log_to_json(".")
+    .then(logs=>{
         res.json({
-            list: [],
-            commits: commits
+            list : logs
         })
     })
     .catch(err=>{
-        console.log("failed", err);
-        res.json({error: err});
+        console.log(err);
+        res.json({
+            err: err
+        });
     });
 });
 

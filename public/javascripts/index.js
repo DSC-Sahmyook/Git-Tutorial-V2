@@ -4,8 +4,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
         data: {
             users: [],
             histories: [],
+            title:"DSC/GIT-Tutorial",
+            content_state:"USERS", // USERS / HISTORIES
+
         },
         methods: {
+            changeContentState: function(state){
+                this.content_state = state;
+            },
             fetchUsers: () => {
                 console.log("load users");
                 return new axios({
@@ -20,12 +26,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
                     url:"/api/history"
                 });
             },
+            getAvatarUrl: (user_name)=>{
+                return (
+                    "https://avatars.githubusercontent.com/" + `${user_name}`
+                );
+            },
+            getGithubUrl:user_name=>{
+                return ("https://github.com/" + `${user_name}`);
+            }
         },
         created: function () {
             this.fetchUsers()
-            .then(result=>{ this.users = result.data.list; })
+            .then(result=>{ this.users = result.data.list; console.log(result.data); })
             .then(this.fetchHistories)
-            .then(result=>{ this.histories = result.data.list; console.log(this.data) });
+            .then(result=>{ this.histories = result.data.list; console.log(result.data); });
         },
     });
 });

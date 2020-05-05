@@ -1,10 +1,134 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,400,700&display=swap');
-
-html,body{
-    width:100%;
-    min-height: 100%;
-    padding:0;
-    margin:0;
-    font-family: 'Noto Sans KR', sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap");
+html,
+body {
+    width: 100%;
+    height: fit-content;
+    padding: 0;
+    margin: 0;
+    font-family: "Noto Sans KR", sans-serif;
+    background-color: #222222;
+}
+p {
+    padding: 0;
+    margin: 0;
 }
 
+#app {
+    height: 100%;
+    width: 400px;
+
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 30px;
+
+    .title {
+        font-family: "Shadows Into Light", cursive !important;
+        text-align: center;
+        
+        color:#fff;
+        .sub{font-size: 1.5em;}
+        .main{ font-size: 3em; }
+    }
+
+    .menu{
+        display: flex;
+        width: 100%;
+        height: fit-content;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        // margin: 20px 0;
+
+        .btn{
+            $btn-color:#2196f3;
+            $btn-color-deactive:#687b8a;
+            border:0;
+            width: 100%;
+            border-radius: 0;
+            background-color: rgba(0,0,0,0);
+            position: relative;
+            height: 50px;
+            color:$btn-color-deactive;
+            font-size: 1.5em;
+            font-weight: 100;
+            font-family: "Noto Sans KR", sans-serif;
+            cursor:pointer;
+            &.active{
+                color:$btn-color;
+                &::after{
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    position: absolute;
+                    height: 3px;
+                    background-color: $btn-color;
+                    content: "";
+                }
+            }
+            
+        }
+    }
+
+    .users-container {
+        width: 100%;
+        margin-top: 30px;
+        
+        // 아바타의 크기
+        $avatar-size: 70px;
+
+        .user-item-container {
+            background-color: #343434;
+            margin-bottom: 20px;
+            box-shadow: 2px 2px 5px #131313;
+            border-radius: 5px;
+            padding: 20px 20px;
+            display: flex;
+            flex-direction: row;
+
+            .avatar-container {
+                .avatar-img {
+                    border-radius: 50%;
+                    width: $avatar-size;
+                    height: $avatar-size;
+                }
+            }
+
+            .info-container {
+                // 패딩 공간
+                $padding-spacing: 15px;
+
+                display: flex;
+                padding-left: $padding-spacing;
+                padding-right: $padding-spacing;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                color:#fff;
+
+                .name {
+                    font-size: 1.2em;
+                }
+                .github {
+                    font-size: 0.8em;
+                    text-decoration: none;
+                    color: #2196f3;
+                }
+                .comment {
+                    font-size: 0.7em;
+                    color: #959698;
+                }
+            }
+        }
+    }
+
+    .commits-container {
+        background-color: red;
+        width: 100%;
+        height: 100%;
+    }
+}
