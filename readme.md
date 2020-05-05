@@ -1,7 +1,6 @@
 ## DSC-GIT-Tutorial
 
 안녕하세요 ! DSC Git 세션입니다!
-실습을 위해 준비해야될 사항이 몇가지 있습니다.
 
 ### 설치 및 실행
 
@@ -25,3 +24,44 @@
 > npm install -g bower
 > npm install -g nodemon
 ```
+
+### 기능
+
+설치를 모두 마친 후 실행하면, 몇가지 내용을 화면에서 확인할 수 있습니다.
+
+-   [x] 추가된 실습 참여자들의 목록
+-   [x] 현재 저장소의 모든 커밋 목록
+
+### 출석부 추가하기
+
+실습을 진행하는 주요 내용은 `users.json`파일을 수정하여 출석부를 채워보는 것입니다.
+`data`폴더에 있는 `users.json`에 본인의 정보를 입력해주신 후 저장한 다음 `push` 해주시면 됩니다.
+
+추가할 데이터 형태는 다음과 같습니다.
+
+```javascript
+[
+    // ..
+    { name: "KyeongSoo Yoo", github: "YOOGOMJA", comment: "신기하네요" },
+    // name: 이름
+    // github : github 계정명
+    // comment : 하고싶은 말
+];
+```
+
+❗️주의❗️
+입력하실 때, 목록의 가장 하단부에 추가해주세요. 그리고, 본인의 이전 내용에는 `,`를 반드시 추가해주셔야 합니다.
+
+```javascript
+// 예시
+// before
+[{ name: "KyeongSoo Yoo", github: "YOOGOMJA", comment: "신기하네요" }];
+
+// after
+[
+    { name: "KyeongSoo Yoo", github: "YOOGOMJA", comment: "신기하네요" },
+    { name: "SeongHyeon Bae", github: "baeseongh", comment: "넘나 어렵네요" },
+];
+```
+
+이후 `github` 저장소로 `push`해주시면 됩니다.
