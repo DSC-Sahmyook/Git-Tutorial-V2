@@ -114,6 +114,7 @@ p {
                 .github {
                     font-size: 0.8em;
                     text-decoration: none;
+                    font-weight: 100;
                     color: #2196f3;
                 }
                 .comment {
@@ -153,9 +154,13 @@ p {
                 }
                 .author-name{
                     font-size: .8em;
+                    font-weight: 100;
+                    color:#fff;
                 }
                 .author-email{
                     font-size: .8em;
+                    font-weight: 100;
+                    color:#8a8a8a;
                 }
                 .item-description{
                     display: flex;
@@ -167,12 +172,16 @@ p {
 
                     .timestamp{
                         font-size: .7em;
+                        color:#999;
                     }
                     .hash{
                         font-size: .7em;
                         padding: 1px 10px;
                         border-radius: 5px;
                         background-color: #03A9F4;
+                        text-decoration: none;
+                        color: #fff;
+                        cursor: pointer;
                     }
                 }
             }

@@ -47,8 +47,8 @@
                     <p class="author-name">{{commit.author.name}}</p>
                     <p class="author-email">{{commit.author.email}}</p>
                     <div class="item-description">
-                        <p class="hash">{{shortHash(commit.hash)}}</p>
-                        <p class="timestamp">{{formattedDate(commit.date)}}</p>
+                        <a v-bind:href="getCommitUrl(commit.hash)" target="_blank" class="hash">{{shortHash(commit.hash)}}</a>
+                        <p  class="timestamp">{{formattedDate(commit.date)}}</p>
                     </div>
                 </div>
             </div>

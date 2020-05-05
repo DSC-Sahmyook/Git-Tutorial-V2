@@ -34,6 +34,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
             getGithubUrl:user_name=>{
                 return ("https://github.com/" + `${user_name}`);
             },
+            getCommitUrl:hash=>{
+                return ("https://github.com/DSC-Sahmyook/Git-Tutorial-V2/commit/" + `${hash}`);
+            },
             shortHash:hash=>{
                 return hash.slice(0,7);
             },
