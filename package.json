@@ -21,6 +21,8 @@
     "http-errors": "~1.6.2",
     "jade": "~1.11.0",
     "morgan": "~1.9.0",
-    "vue-scrollto": "^2.18.1"
+    "vue-scrollto": "^2.18.1",
+    "clean-css": ">=4.1.11",
+    "constantinople": ">=3.1.1"
   }
 }
