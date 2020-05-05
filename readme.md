@@ -51,6 +51,7 @@
 
 ❗️주의❗️
 입력하실 때, 목록의 가장 하단부에 추가해주세요. 그리고, 본인의 이전 내용에는 `,`를 반드시 추가해주셔야 합니다.
+가장 마지막 줄에 `,`가 있으면 오류가 생길 수 있습니다.
 
 ```javascript
 // 예시
@@ -60,7 +61,7 @@
 // after
 [
     { name: "KyeongSoo Yoo", github: "YOOGOMJA", comment: "신기하네요" },
-    { name: "SeongHyeon Bae", github: "baeseongh", comment: "넘나 어렵네요" },
+    { name: "SeongHyeon Bae", github: "baeseongh", comment: "넘나 어렵네요" }
 ];
 ```
 
