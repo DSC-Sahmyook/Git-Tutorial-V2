@@ -28,8 +28,8 @@
                 Commits
             </button>
         </div>
-        <div class="users-container">
-            <div class="user-item-container" v-for="user in users" v-if="content_state === 'USERS'">
+        <div class="users-container" v-if="content_state === 'USERS'">
+            <div class="user-item-container" v-for="user in users" >
                 <div class="avatar-container">
                     <img class="avatar-img" v-bind:src="getAvatarUrl(user.github)"  title="github avatar image"/>
                 </div>
@@ -41,7 +41,17 @@
             </div>
         </div>
         <div class="commits-container" v-if="content_state === 'COMMITS'"> 
-            commits
+            <div class="commit-item-container" v-for="commit in commits">
+                <div class="info-container">
+                    <p class="subject">{{commit.subject}}</p>
+                    <p class="author-name">{{commit.author.name}}</p>
+                    <p class="author-email">{{commit.author.email}}</p>
+                    <div class="item-description">
+                        <p class="hash">{{shortHash(commit.hash)}}</p>
+                        <p class="timestamp">{{formattedDate(commit.date)}}</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

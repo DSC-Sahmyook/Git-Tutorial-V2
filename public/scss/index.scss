@@ -42,8 +42,7 @@ p {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        // margin: 20px 0;
-
+        
         .btn{
             $btn-color:#2196f3;
             $btn-color-deactive:#687b8a;
@@ -85,7 +84,6 @@ p {
             background-color: #343434;
             margin-bottom: 20px;
             box-shadow: 2px 2px 5px #131313;
-            border-radius: 5px;
             padding: 20px 20px;
             display: flex;
             flex-direction: row;
@@ -127,8 +125,57 @@ p {
     }
 
     .commits-container {
-        background-color: red;
         width: 100%;
-        height: 100%;
+        margin-top: 30px;
+
+        .commit-item-container {
+            background-color: #343434;
+            margin-bottom: 20px;
+            box-shadow: 2px 2px 5px #131313;
+            padding: 20px 20px;
+            display: flex;
+            flex-direction: row;
+
+            .info-container {
+                // 패딩 공간
+                $padding-spacing: 15px;
+
+                display: flex;
+                padding-left: $padding-spacing;
+                padding-right: $padding-spacing;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                color:#fff;
+
+                .subject{
+                    font-size: 1.5em;
+                }
+                .author-name{
+                    font-size: .8em;
+                }
+                .author-email{
+                    font-size: .8em;
+                }
+                .item-description{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    width: 100%;
+                    margin-top: 10px;
+
+                    .timestamp{
+                        font-size: .7em;
+                    }
+                    .hash{
+                        font-size: .7em;
+                        padding: 1px 10px;
+                        border-radius: 5px;
+                        background-color: #03A9F4;
+                    }
+                }
+            }
+        }
     }
 }
