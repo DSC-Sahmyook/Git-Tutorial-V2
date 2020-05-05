@@ -44,11 +44,11 @@
             <div class="commit-item-container" v-for="commit in commits">
                 <div class="info-container">
                     <p class="subject">{{commit.subject}}</p>
-                    <p class="author-name">{{commit.author.name}}</p>
-                    <p class="author-email">{{commit.author.email}}</p>
+                    <p class="author-name">{{commit.authorName}}</p>
+                    <p class="author-email">{{commit.authorEmail}}</p>
                     <div class="item-description">
-                        <a v-bind:href="getCommitUrl(commit.hash)" target="_blank" class="hash">{{shortHash(commit.hash)}}</a>
-                        <p  class="timestamp">{{formattedDate(commit.date)}}</p>
+                        <a v-bind:href="getCommitUrl(commit.hash)" target="_blank" class="hash">{{commit.abbrevHash}}</a>
+                        <p  class="timestamp">{{formattedDate(commit.authorDate)}}</p>
                     </div>
                 </div>
             </div>
