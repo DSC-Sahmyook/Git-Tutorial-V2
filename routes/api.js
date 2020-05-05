@@ -2,7 +2,7 @@ import express from 'express';
 const router = express.Router();
 
 import UsersData from '../data/users.json';
-import git_log_to_json from 'git-log-to-json';
+import {gitlogPromise} from 'gitlog';
 
 router.get("/", (req,res,next)=>{
     res.json("Hello");
@@ -15,14 +15,18 @@ router.get("/user", (req, res)=>{
 });
 
 router.get("/history", (req, res)=>{
-    git_log_to_json(".")
-    .then(logs=>{
+    gitlogPromise({
+        repo: __dirname,
+        fields: ["hash", "abbrevHash", "subject", "authorName", "authorEmail" , "authorDate" ,"committerDate","committerEmail","committerName"]
+    })
+    .then(commits=>{
+        console.log(commits);
         res.json({
-            list : logs
+            list : commits
         })
     })
     .catch(err=>{
-        console.log(err);
+        console.log("err");
         res.json({
             err: err
         });
