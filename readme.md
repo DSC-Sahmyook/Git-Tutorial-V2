@@ -15,6 +15,7 @@
 > npm run module-install
 > npm start
 ```
+이후 주소창에 localhost:3000 을 입력하면 튜토리얼 페이지가 실행된것을 볼 수 있습니다!
 
 ### 오류가 발생할 경우
 
