@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <title>Document</title>
+    <script type="text/javascript" src="/bower_components/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="/bower_components/axios/dist/axios.js"></script>
+    <script type="text/javascript" src="/javascripts/index.js"></script>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/index.css" />
+</head>
+<body >
+    <div id="app">
+        <div v-for="user in users">
+            <p>
+                {{user.name}}
+            </p>
+            <p>
+                {{user.github}}
+            </p>
+        </div>
+    </div>
+</body>
+</html>

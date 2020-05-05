@@ -1,0 +1,24 @@
+{
+  "name": "git-tutorial",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "watch-sass": "node-sass --watch ./public/scss --output ./public/stylesheets",
+    "build-sass": "node-sass ./public/scss --output ./public/stylesheets",
+    "module-install": "npm install && bower install",
+    "start": "nodemon --exec babel-node ./bin/www"
+  },
+  "dependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.6",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "^3.1.2",
+    "express": "~4.16.0",
+    "git-log": "^1.0.0-beta.1",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0"
+  }
+}

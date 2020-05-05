@@ -1,0 +1,22 @@
+{
+  "name": "git-tutorial",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Yoo KyeongSoo <dev.yoogomja@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vue": "^2.6.11",
+    "moment": "^2.25.2",
+    "axios": "^0.19.2"
+  }
+}
