@@ -4,6 +4,10 @@
 	{ "name": "Joungwan Park", "github": "Parkjoungwan", "comment": "신기할지도" },
 	{ "name": "Yeoreum Lee", "github": "leeyeoreum01", "comment": "아직 어렵네요" },
 	{ "name": "DaUn Song", "github": "HaRyoung", "comment": "기부받습니다 돈좀주십쇼" },
+<<<<<<< HEAD
 	{ "name": "Hyunseok Lee", "github": "rapael3020", "comment": "으어어어어어어" },
+=======
+	{ "name": "아무개", "github": "YOOGOMJA", "comment": "이거 너무 좋은가? 어려운거 같은데" },
+>>>>>>> 83f6e7c3d2622bda93376fa6da6c77eeda472e50
 	{ "name": "Youngrok Kim", "github": "bombedhair", "comment": "신기해요~~!" }
 ]
